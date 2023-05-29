@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  background-image: linear-gradient(180deg, #56711857 0%, #0e12d441 100%),
+    url(../image/Fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+/* LOGO */
+
+.logo_olympia {
+  padding: 50px;
+  animation: rotar 1s infinite alternate ease-in-out;
+  width: 250px;
+}
+
+@keyframes rotar {
+  0% {
+    transform: scale(1) rotate();
+  }
+  100% {
+    transform: scale(1.05) rotate(-10deg);
+  }
+}
+
+/* LOGO FINAL */
+
+.logo_olympia__foter {
+  padding-top: 70px;
+  animation: rotar_footer 1s infinite alternate ease-in-out;
+  width: 350px;
+}
+
+@keyframes rotar_footer {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.05) rotate(-10deg);
+  }
+}
+
+header {
+  display: flex;
+}
+
+/* Letras */
+
+.ml3 {
+  font-weight: 800;
+  font-size: 4.5em;
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-right: 200px;
+  color: #fff;
+  animation-name: anim;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+/* BOTON */
+
+.btn__girar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 200px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  background: #e3ef085d;
+  z-index: 1;
+  font-size: 35px;
+}
+.btn__girar:hover:after {
+  width: 100%;
+  left: 0;
+}
+.btn__girar:after {
+  border-radius: 5px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #c6ebc35d;
+  right: 0;
+}
+
+/* LOGO */
+
+.logo_olympia {
+  animation: rotar 1s infinite alternate ease-in-out;
+  width: 350px;
+}
+
+/* LOGO FIN */
+
+.logo_fin {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 100px;
+}
+
+@keyframes rotar {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.05) rotate(-10deg);
+  }
+}
+
+/* Efecto ola */
+.absolute {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+}
+
+#premio {
+  color: white;
+  position: absolute;
+  font-weight: bold;
+  font-size: 25px;
+  padding-top: 20px;
+  padding: 20px;
+}
+
+/* Imagen Ruleta */
+
+img {
+  z-index: 100;
+  transition: all 5s;
+  animation-name: sombraImagen;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes sombraImagen {
+  0% {
+    filter: drop-shadow(0 0 0.75rem gold);
+  }
+  25% {
+    filter: drop-shadow(0 0 0.75rem red);
+  }
+  50% {
+    filter: drop-shadow(0 0 0.75rem gold);
+  }
+  75% {
+    filter: drop-shadow(0 0 0.75rem red);
+  }
+  100% {
+    filter: drop-shadow(0 0 0.75rem gold);
+  }
+}
+
+/* Flecha */
+
+.vara {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  width: 150px;
+  height: 100px;
+  animation-name: anim;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes anim {
+  0% {
+    filter: drop-shadow(10px 10px 10px gold);
+  }
+  25% {
+    filter: drop-shadow(10px 10px 10px red);
+  }
+  50% {
+    filter: drop-shadow(10px 10px 10px gold);
+  }
+  75% {
+    filter: drop-shadow(10px 10px 10px red);
+  }
+  100% {
+    filter: drop-shadow(10px 10px 10px gold);
+  }
+}
+
+.contador {
+  margin-bottom: 25px;
+}
+
+/* CSS De las alertas */
+
+.tituloAlerta {
+  font-size: 40px;
+  animation-name: anim;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  color: #716add;
+}
+
+.finalistasUsuaros {
+  margin-bottom: 20px;
+  column-count: 2;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+}
+
+.tituloFinalista {
+  color: gold;
+  margin-bottom: 25px;
+}
+
+.nombreGanador {
+  font-size: 50px;
+  color: green;
+}
+
+.ctoFormulario {
+  font-size: 30px;
+  color: green;
+  cursor: pointer;
+}

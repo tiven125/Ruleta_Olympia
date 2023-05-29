@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+
+    <style>
+        @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+        body {
+            background-image: linear-gradient(180deg, #ffffff57 0%, #03043341 100%),
+                url(../RuletaCasino/image/fondoDosa.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+
+        .contenedor {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .contenedor .item {
+            grid-column: 3/5;
+        }
+
+        .contenedor .item1 {
+            grid-column: 2/3;
+        }
+
+        .contenedor .item4 {
+            grid-column: 2/3;
+        }
+
+        .contenedor button {
+            background: rebeccapurple;
+            border-radius: 10px;
+            width: 200px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+                7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+            background: #e3ef085d;
+            z-index: 1;
+            font-size: 35px;
+
+        }
+
+        button:hover {
+            background: #92990e;
+        }
+    </style>
+    <title>Menu</title>
+</head>
+
+<body>
+
+    <section class="contenedor">
+
+        <div class="contenedor_imagen item">
+            <img src="image/logo.png" alt="">
+        </div>
+
+        <div class="item1">
+            <button onclick="abrirRuleta()">
+                <h1>Ruleta</h1>
+            </button>
+
+        </div>
+
+
+        <div class="item2">
+            <button onclick="abrirNuevaPagina()">
+                <h1>Finalistas</h1>
+            </button>
+        </div>
+
+        <div class="item3">
+
+            <button onclick="generarGanador()">
+                <h1>Generar Ganador</h1>
+            </button>
+        </div>
+        <div class="item4">
+
+
+            <button onclick="abrirNuevaPaginaTurnos()">
+                <h1>Turnos</h1>
+            </button>
+        </div>
+
+        <div class="item5">
+            <button onclick="Reiniciar()" id=" btn_reiniciar">
+                <h1>Reiniciar</h1>
+            </button>
+
+        </div>
+
+        <script src="https://kit.fontawesome.com/9a94afc609.js" crossorigin="anonymous"></script>
+
+        <script>// Reiniciar localStorage
+
+            function Reiniciar() {
+                if (confirm("¿Estás seguro de realizar esta acción?")) {
+                    alert("Datos Eliminados")
+                    localStorage.removeItem("intentos20");
+                    localStorage.removeItem("intentos30");
+                    localStorage.removeItem("intentos40");
+                    localStorage.removeItem("intentos100");
+                    localStorage.removeItem("Finalistas");
+                    localStorage.removeItem("turnos")
+                    localStorage.removeItem("intentosRaspa")
+                    localStorage.removeItem("usersFinalistas")
+                    localStorage.removeItem("premiosDiauno")
+
+                } else {
+                    alert("El usuario ha cancelado")
+                }
+            }
+
+
+
+            function abrirNuevaPagina() {
+                // URL de la página que deseas abrir
+                var url = "../RuletaCasino/finalista.html";
+
+                // Abre la página en una nueva pestaña o ventana
+                window.open(url, "_blank");
+            }
+
+            function abrirNuevaPaginaTurnos() {
+                // URL de la página que deseas abrir
+                var url = "../RuletaCasino/turnos.html";
+
+                // Abre la página en una nueva pestaña o ventana
+                window.open(url);
+            }
+            function abrirRuleta() {
+                // URL de la página que deseas abrir
+                var url = "../RuletaCasino/index.html";
+
+                // Abre la página en una nueva pestaña o ventana
+                window.open(url);
+            }
+            function generarGanador() {
+                // URL de la página que deseas abrir
+                var url = "../RuletaCasino/generarGanador.html";
+
+                // Abre la página en una nueva pestaña o ventana
+                window.open(url);
+            }
+
+
+
+
+        </script>
+
+
+
+</body>
+
+</html>

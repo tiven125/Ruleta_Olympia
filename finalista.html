@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
+
+    <title>Finalistas</title>
+</head>
+
+<body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="menu.html">
+                Finalistas
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="crud-container">
+            <div class="crud-header">
+                <h1>Finalistas Registrados</h1>
+                <button id="openRegistroModal" class="button is-success">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Nuevo Finalista</span>
+                </button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Cedula</th>
+                        <th>Telefono</th>
+                    </tr>
+                </thead>
+
+            </table>
+        </div>
+    </main>
+
+
+    <div class="modal" id="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Registar Nuevo Finalista</p>
+                <button class="delete" aria-label="close" id="cerrarRegistrer"></button>
+            </header>
+            <section class="modal-card-body">
+
+                <form action="" id="regitro-form">
+
+                    <div class="field">
+                        <label class="label">Nombre</label>
+                        <div class="control has-icons-left">
+                            <input class="input is-success" type="text" name="nombre" placeholder="Ingresar Nombre">
+                            <span class="icon is-small is-left">
+                                <i class="fa-solid fa-user"></i>
+
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Cedula</label>
+                        <div class="control has-icons-left">
+                            <input class="input is-success" type="number" placeholder="Ingrese Cedula" name="cedula">
+                            <span class="icon is-small is-left">
+                                <i class="fa-solid fa-closed-captioning"></i>
+
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Telefono</label>
+                        <div class="control has-icons-left">
+                            <input name="telefono" class="input is-success" type="number"
+                                placeholder="Ingrese Telefono">
+                            <span class="icon is-small is-left">
+                                <i class="fa-duotone fa-mobile-button"></i>
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <footer class="modal-card-foot">
+                        <button type="submit" class="button is-success">
+                            <i class="fa-regular fa-floppy-disk"></i>
+                            <span>Guardar</span>
+                        </button>
+                    </footer>
+
+                </form>
+
+            </section>
+
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/9a94afc609.js" crossorigin="anonymous"></script>
+    <script type="module" src="js/formulario.js"></script>
+</body>
+
+</html>
